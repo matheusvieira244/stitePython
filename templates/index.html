@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site do tche</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body{
+            background-color: darkgrey;
+        }
+        
+        h1{
+            color: darkolivegreen;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        h3{
+            color: brown;
+            font-size: 40px;
+        }
+        
+            .nomeVisitante{
+                color: blueviolet;
+                font-size: 50px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+        
+            .botao {
+                height: 30px;
+                width: 200px;
+                background-color: darkgreen;
+                color: aliceblue;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+        
+            }
+        
+            .botao:hover {
+                background-color: chocolate;
+                color: darkblue;
+            }
+    </style>
+</head>
+<body>
+    <center>
+    <h1>Bem Vindo do meu site</h1>
+    <h3>Esse site é sobre futebol</h3>
+    <p>Bem vindo</p>
+    <p id="visitante" class="nomeVisitante">Aguardando...</p>
+
+    
+    <a href="https://ge.globo.com/agenda/#/futebol"><img src="futebol.jpg" alt=""></a>
+    <br>
+    <a href="https://ge.globo.com/agenda/#/futebol">Clique no link</a>
+
+    <h3>Cadastro</h3>
+    <label>Nome</label>
+    <br>
+    <input type="text">
+    <br>
+    <label>Sobrenome</label>
+    <br>
+    <input type="text">
+    <br>
+    <br>
+    <button onclick="enviar()" class="botao">Enviar</button>
+
+
+
+
+
+    <script>
+        function enviar(){
+            alert("Cadastro feito com sucesso!")
+        }
+        
+        //Variavel para pegar o nome do visitante
+        var usuario = prompt ("Digite o seu nome")
+        
+        //Pegar o valor da variavel e imprimir na tela
+        document.getElementById('visitante').innerHTML = usuario
+    </script>
+    </center>
+</body>
+</html>
